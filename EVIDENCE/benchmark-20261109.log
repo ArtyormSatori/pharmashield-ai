@@ -1,0 +1,60 @@
+
+=======================================================
+  PHARMASHIELD AI - CLINICAL INTERACTION BENCHMARK     
+  Evaluating 36 verified clinical drug pairs...     
+=======================================================
+
+[PASS] warfarin        + amiodarone      | Expected: CONTRAINDICATED | Predicted: CONTRAINDICATED (0.11ms)
+[PASS] warfarin        + aspirin         | Expected: SEVERE         | Predicted: SEVERE         (0.07ms)
+[PASS] warfarin        + ibuprofen       | Expected: CONTRAINDICATED | Predicted: CONTRAINDICATED (0.06ms)
+[PASS] warfarin        + fluconazole     | Expected: CONTRAINDICATED | Predicted: CONTRAINDICATED (0.05ms)
+[PASS] clopidogrel     + omeprazole      | Expected: SEVERE         | Predicted: SEVERE         (0.05ms)
+[PASS] sertraline      + tramadol        | Expected: SEVERE         | Predicted: SEVERE         (0.06ms)
+[PASS] sertraline      + linezolid       | Expected: CONTRAINDICATED | Predicted: CONTRAINDICATED (0.05ms)
+[PASS] fluoxetine      + phenelzine      | Expected: CONTRAINDICATED | Predicted: CONTRAINDICATED (0.04ms)
+[PASS] amiodarone      + azithromycin    | Expected: CONTRAINDICATED | Predicted: CONTRAINDICATED (0.04ms)
+[PASS] citalopram      + haloperidol     | Expected: CONTRAINDICATED | Predicted: CONTRAINDICATED (0.05ms)
+[PASS] atorvastatin    + clarithromycin  | Expected: CONTRAINDICATED | Predicted: CONTRAINDICATED (0.06ms)
+[PASS] simvastatin     + amiodarone      | Expected: CONTRAINDICATED | Predicted: CONTRAINDICATED (0.05ms)
+[PASS] lisinopril      + spironolactone  | Expected: SEVERE         | Predicted: SEVERE         (0.04ms)
+[PASS] oxycodone       + alprazolam      | Expected: CONTRAINDICATED | Predicted: CONTRAINDICATED (0.04ms)
+[PASS] diazepam        + tramadol        | Expected: SEVERE         | Predicted: SEVERE         (0.05ms)
+[PASS] amiodarone      + digoxin         | Expected: SEVERE         | Predicted: SEVERE         (0.04ms)
+[PASS] rifampin        + warfarin        | Expected: SEVERE         | Predicted: SEVERE         (0.04ms)
+[PASS] ciprofloxacin   + theophylline    | Expected: SEVERE         | Predicted: SEVERE         (0.04ms)
+[PASS] metformin       + ciprofloxacin   | Expected: MODERATE       | Predicted: MODERATE       (0.04ms)
+[PASS] diltiazem       + atorvastatin    | Expected: MODERATE       | Predicted: MODERATE       (0.04ms)
+[PASS] verapamil       + simvastatin     | Expected: MODERATE       | Predicted: MODERATE       (0.04ms)
+[PASS] sertraline      + metoprolol      | Expected: MODERATE       | Predicted: MODERATE       (0.05ms)
+[PASS] fluoxetine      + metoprolol      | Expected: MODERATE       | Predicted: MODERATE       (0.05ms)
+[PASS] omeprazole      + diazepam        | Expected: MODERATE       | Predicted: MODERATE       (0.04ms)
+[PASS] ciprofloxacin   + zolpidem        | Expected: MODERATE       | Predicted: MODERATE       (0.04ms)
+[PASS] amlodipine      + simvastatin     | Expected: MODERATE       | Predicted: MODERATE       (0.04ms)
+[PASS] atorvastatin    + metformin       | Expected: SAFE           | Predicted: SAFE           (0.03ms)
+[PASS] lisinopril      + metformin       | Expected: SAFE           | Predicted: SAFE           (0.03ms)
+[PASS] amlodipine      + metformin       | Expected: SAFE           | Predicted: SAFE           (0.03ms)
+[PASS] acetaminophen   + amoxicillin     | Expected: SAFE           | Predicted: SAFE           (0.03ms)
+[PASS] pantoprazole    + clopidogrel     | Expected: SAFE           | Predicted: SAFE           (0.03ms)
+[PASS] rosuvastatin    + clarithromycin  | Expected: SAFE           | Predicted: SAFE           (0.03ms)
+[PASS] acetaminophen   + lisinopril      | Expected: SAFE           | Predicted: SAFE           (0.03ms)
+[PASS] losartan        + amlodipine      | Expected: SAFE           | Predicted: SAFE           (0.03ms)
+[PASS] acetaminophen   + atorvastatin    | Expected: SAFE           | Predicted: SAFE           (0.03ms)
+[PASS] metformin       + pantoprazole    | Expected: SAFE           | Predicted: SAFE           (0.03ms)
+
+-------------------------------------------------------
+BENCHMARK SUMMARY METRICS:
+  Total Test Cases:            36
+  True Positives (Alerts):     26
+  True Negatives (Safe):       10
+  False Positives:             0
+  False Negatives:             0
+  Sensitivity (Recall):        100.00%
+  Specificity:                 100.00%
+  Precision:                   100.00%
+  F1-Score:                    100.00%
+  Binary Detection Accuracy:   100.00%
+  Exact Severity Grade Acc:    100.00%
+  Mean Evaluation Latency:     0.044 ms
+-------------------------------------------------------
+
+Results successfully saved to /home/adminis/hackathon-builds/pharmashield-ai/BENCHMARK_RESULTS.json

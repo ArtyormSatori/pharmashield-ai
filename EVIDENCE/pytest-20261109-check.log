@@ -1,0 +1,27 @@
+============================= test session starts ==============================
+platform linux -- Python 3.13.5, pytest-9.1.1, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /home/adminis/hackathon-builds/pharmashield-ai
+plugins: platformdirs-4.13.4, anyio-4.15.0, typeguard-4.4.2
+collecting ... collected 12 items
+
+tests/test_app.py::TestPharmaShieldAI::test_01_health_check PASSED       [  8%]
+tests/test_app.py::TestPharmaShieldAI::test_02_index_html_served PASSED  [ 16%]
+tests/test_app.py::TestPharmaShieldAI::test_03_drug_search_autocomplete PASSED [ 25%]
+tests/test_app.py::TestPharmaShieldAI::test_04_brand_name_resolution PASSED [ 33%]
+tests/test_app.py::TestPharmaShieldAI::test_05_critical_bleeding_interaction PASSED [ 41%]
+tests/test_app.py::TestPharmaShieldAI::test_06_serotonin_syndrome_detection PASSED [ 50%]
+tests/test_app.py::TestPharmaShieldAI::test_07_torsades_qt_prolongation PASSED [ 58%]
+tests/test_app.py::TestPharmaShieldAI::test_08_triple_whammy_nephrotoxicity PASSED [ 66%]
+tests/test_app.py::TestPharmaShieldAI::test_09_geriatric_beers_criteria PASSED [ 75%]
+tests/test_app.py::TestPharmaShieldAI::test_10_safe_alternatives_generation PASSED [ 83%]
+tests/test_app.py::TestPharmaShieldAI::test_11_api_analyze_e2e PASSED    [ 91%]
+tests/test_app.py::TestPharmaShieldAI::test_12_responsible_ai_zero_egress PASSED [100%]
+
+=============================== warnings summary ===============================
+../../.local/lib/python3.13/site-packages/starlette/testclient.py:53
+  /home/adminis/.local/lib/python3.13/site-packages/starlette/testclient.py:53: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    _PortalFactoryType = Callable[[], AbstractContextManager[anyio.abc.BlockingPortal]]
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 12 passed, 1 warning in 11.31s ========================

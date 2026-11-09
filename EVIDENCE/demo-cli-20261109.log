@@ -1,0 +1,190 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+======================================================================
+      PHARMASHIELD AI - CLINICAL SAFETY DEMONSTRATION
+      Zero-Cloud Egress Clinical Decision Support Engine
+======================================================================
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 4949.66it/s]
+
+======================================================================
+ CLINICAL CASE #1: FATAL ANTICOAGULATION BLEED (CYP2C9 BLOCKADE + SYNERGY)
+======================================================================
+Prescribed Regimen: Coumadin, Cordarone, Bayer Aspirin
+Patient Profile:    Age 68y | eGFR: 75.0 mL/min | Hepatic: False | Pregnant: False
+----------------------------------------------------------------------
+1. NEURAL ENTITY RESOLUTION:
+   • Query 'Coumadin' ➔ Warfarin (Canonical ID: warfarin)
+     Class: Anticoagulant (Vitamin K Antagonist) | Method: exact_alias (Confidence: 100.0%)
+   • Query 'Cordarone' ➔ Amiodarone (Canonical ID: amiodarone)
+     Class: Class III Antiarrhythmic | Method: exact_alias (Confidence: 100.0%)
+   • Query 'Bayer Aspirin' ➔ Aspirin (Canonical ID: aspirin)
+     Class: Antiplatelet / Irreversible COX-1/2 Inhibitor | Method: token_alias (Confidence: 95.0%)
+
+2. SAFETY DETERMINATION: [CONTRAINDICATED] (Evaluated in 0.53 ms)
+
+3. PAIRWISE INTERACTIONS DETECTED (2):
+   [CONTRAINDICATED] Warfarin ⟷ Amiodarone
+       Mechanism:  Pharmacokinetic (CYP2C9/CYP3A4 Inhibition) — Amiodarone potently inhibits CYP2C9 and CYP3A4, the principal clearance pathways of active S-warfarin and R-warfarin. This leads to marked accumulation of warfarin.
+       Effect:     Dramatically elevated INR, severe life-threatening internal hemorrhage, and gastrointestinal/intracranial bleeding.
+       Management: Avoid combination if possible. If concomitant use is clinically mandatory, empirically reduce warfarin maintenance dose by 33% to 50% upon starting amiodarone and monitor INR every 48-72 hours until stable.
+       Citations:  Chest 2012; 141(2 Suppl):e152S-e184S, Circulation 2007; 116(11):1320-1329
+   [SEVERE] Warfarin ⟷ Aspirin
+       Mechanism:  Pharmacodynamic (Additive Antithrombotic / Mucosal Erosion) — Aspirin causes irreversible platelet COX-1 inhibition and direct gastric mucosal barrier breakdown, while warfarin inhibits clotting factor synthesis.
+       Effect:     Exponential 3-fold to 5-fold surge in major gastrointestinal bleeding and intracranial hemorrhage.
+       Management: Concomitant therapy should be reserved strictly for clear mechanical valve or recent ACS indications. Add a gastroprotective proton pump inhibitor (e.g., Pantoprazole) and monitor hemoglobin/hematocrit.
+       Citations:  J Am Coll Cardiol 2018; 71(13):1454-1466
+
+4. CUMULATIVE MULTI-DRUG TOXICITY INDICES:
+   • Serotonin Syndrome Index:  0.00 [LOW]
+   • QT Prolongation Arrhythmia: 0.50 [HIGH]
+   • Bleeding / Hemorrhage:      1.00 [CRITICAL]
+   • CNS / Respiratory Sedation: 0.06 [LOW]
+
+6. PATIENT-FRIENDLY ACTIONABLE GUIDANCE:
+   💓 Heart Rhythm Warning: Report sudden fluttering in your chest, fainting spells, unexplained dizziness, or shortness of breath to your healthcare team right away.
+   🩸 Bleeding Precautions: Avoid contact sports, use a soft-bristled toothbrush, and look out for unusual bruising, black or tarry stools, or nosebleeds that do not stop.
+   👴 Senior Care Notice: Certain medications in your list are associated with higher fall risks or confusion in adults over 65. Consult your pharmacist for dose titration.
+
+======================================================================
+ CLINICAL CASE #2: LETHAL SEROTONIN STORM (TRIPLE SEROTONERGIC POLYPHARMACY)
+======================================================================
+Prescribed Regimen: Zoloft, Ultram, Zyvox
+Patient Profile:    Age 38y | eGFR: 95.0 mL/min | Hepatic: False | Pregnant: False
+----------------------------------------------------------------------
+1. NEURAL ENTITY RESOLUTION:
+   • Query 'Zoloft' ➔ Sertraline (Canonical ID: sertraline)
+     Class: Selective Serotonin Reuptake Inhibitor (SSRI) | Method: exact_alias (Confidence: 100.0%)
+   • Query 'Ultram' ➔ Tramadol (Canonical ID: tramadol)
+     Class: Synthetic Opioid Analgesic / SNRI | Method: exact_alias (Confidence: 100.0%)
+   • Query 'Zyvox' ➔ Linezolid (Canonical ID: linezolid)
+     Class: Oxazolidinone Antibiotic / Reversible MAO-A/B Inhibitor | Method: exact_alias (Confidence: 100.0%)
+
+2. SAFETY DETERMINATION: [CONTRAINDICATED] (Evaluated in 0.32 ms)
+
+3. PAIRWISE INTERACTIONS DETECTED (2):
+   [SEVERE] Sertraline ⟷ Tramadol
+       Mechanism:  Pharmacodynamic (Additive Serotonergic Reuptake Blockade) — Sertraline blocks 5-HT reuptake, while Tramadol inhibits serotonin and norepinephrine reuptake and mildly stimulates 5-HT release.
+       Effect:     Precipitation of Serotonin Syndrome: autonomic instability, neuromuscular hyperreflexia, clonus, hyperthermia, and seizures.
+       Management: Avoid co-administration. If analgesia is required, use non-serotonergic analgesics (e.g. Acetaminophen, short-term NSAID if non-contraindicated).
+       Citations:  Am J Psychiatry 2007; 164(9):1339-1346
+   [CONTRAINDICATED] Sertraline ⟷ Linezolid
+       Mechanism:  Pharmacodynamic (MAO-A Inhibition + SSRI Storm) — Linezolid has non-selective, reversible monoamine oxidase (MAO) inhibitory activity. Combining it with an SSRI blocks both 5-HT breakdown and reuptake.
+       Effect:     Severe, potentially fatal Serotonin Syndrome with hyperthermia, rhabdomyolysis, disseminated intravascular coagulation, and death.
+       Management: CONTRAINDICATED. Linezolid must not be administered to patients receiving SSRIs unless emergency situation with close ICU monitoring and immediate discontinuation of SSRI.
+       Citations:  FDA Safety Announcement 2011, Clin Infect Dis 2006; 42(11):1578-1583
+
+4. CUMULATIVE MULTI-DRUG TOXICITY INDICES:
+   • Serotonin Syndrome Index:  1.00 [CRITICAL]
+   • QT Prolongation Arrhythmia: 0.35 [ELEVATED]
+   • Bleeding / Hemorrhage:      0.28 [HIGH]
+   • CNS / Respiratory Sedation: 0.44 [ELEVATED]
+
+5. EVIDENCE-BASED SAFER ALTERNATIVES:
+   ➔ Substitute TRAMADOL with ACETAMINOPHEN (Analgesic)
+      Rationale: Non-serotonergic analgesic without 5-HT reuptake inhibition properties.
+      Advantage: Eliminates fatal Serotonin Syndrome risk in patients taking SSRIs, SNRIs, or MAOIs.
+
+6. PATIENT-FRIENDLY ACTIONABLE GUIDANCE:
+   🚨 Serotonin Warning: Watch for shivering, muscle twitches or stiffness, fever, rapid heartbeat, and extreme agitation. Seek emergency care immediately if these occur.
+   🩸 Bleeding Precautions: Avoid contact sports, use a soft-bristled toothbrush, and look out for unusual bruising, black or tarry stools, or nosebleeds that do not stop.
+
+======================================================================
+ CLINICAL CASE #3: ARRHYTHMOGENIC TORSADES DE POINTES (QTC TRIAD)
+======================================================================
+Prescribed Regimen: Z-Pak, Haldol, Celexa
+Patient Profile:    Age 72y | eGFR: 55.0 mL/min | Hepatic: False | Pregnant: False
+----------------------------------------------------------------------
+1. NEURAL ENTITY RESOLUTION:
+   • Query 'Z-Pak' ➔ Azithromycin (Canonical ID: azithromycin)
+     Class: Macrolide Antibiotic (Azalide) | Method: exact_alias (Confidence: 100.0%)
+   • Query 'Haldol' ➔ Haloperidol (Canonical ID: haloperidol)
+     Class: First-Generation Typical Antipsychotic | Method: exact_alias (Confidence: 100.0%)
+   • Query 'Celexa' ➔ Citalopram (Canonical ID: citalopram)
+     Class: Selective Serotonin Reuptake Inhibitor (SSRI) | Method: exact_alias (Confidence: 100.0%)
+
+2. SAFETY DETERMINATION: [CONTRAINDICATED] (Evaluated in 0.24 ms)
+
+3. PAIRWISE INTERACTIONS DETECTED (1):
+   [CONTRAINDICATED] Haloperidol ⟷ Citalopram
+       Mechanism:  Pharmacodynamic (Additive Cardiac IKr Blockade / Torsades Risk) — Both agents independently prolong the corrected QT interval (QTc) via hERG channel inhibition.
+       Effect:     Marked additive QT prolongation, polymorphous ventricular tachycardia, and cardiac arrest.
+       Management: Contraindicated. If antipsychotic and antidepressant therapy are both required, use agents with lower arrhythmogenic risk (e.g., Aripiprazole and Sertraline at moderate doses) with baseline ECG.
+       Citations:  Am J Psychiatry 2013; 170(7):742-750
+
+4. CUMULATIVE MULTI-DRUG TOXICITY INDICES:
+   • Serotonin Syndrome Index:  0.50 [HIGH]
+   • QT Prolongation Arrhythmia: 1.00 [CRITICAL]
+   • Bleeding / Hemorrhage:      0.16 [LOW]
+   • CNS / Respiratory Sedation: 0.41 [ELEVATED]
+
+5. EVIDENCE-BASED SAFER ALTERNATIVES:
+   ➔ Substitute HALOPERIDOL with ARIPIPRAZOLE (Atypical Antipsychotic (Partial D2/5-HT1A Agonist))
+      Rationale: Aripiprazole demonstrates significantly lower QTc prolongation potential compared to typical antipsychotics like Haloperidol.
+      Advantage: Minimizes Torsades de Pointes arrhythmogenic risk when co-prescribed with QT-prolonging antidepressants or antibiotics.
+   ➔ Substitute CITALOPRAM with SERTRALINE (Selective Serotonin Reuptake Inhibitor (SSRI))
+      Rationale: Sertraline carries lower dose-dependent QTc prolongation hazard and has safer cardiovascular profile in cardiac patients (SADHART trial).
+      Advantage: Lower risk of torsades de pointes in geriatric patients with underlying cardiac conduction disorders.
+
+6. PATIENT-FRIENDLY ACTIONABLE GUIDANCE:
+   🚨 Serotonin Warning: Watch for shivering, muscle twitches or stiffness, fever, rapid heartbeat, and extreme agitation. Seek emergency care immediately if these occur.
+   💓 Heart Rhythm Warning: Report sudden fluttering in your chest, fainting spells, unexplained dizziness, or shortness of breath to your healthcare team right away.
+   👴 Senior Care Notice: Certain medications in your list are associated with higher fall risks or confusion in adults over 65. Consult your pharmacist for dose titration.
+
+======================================================================
+ CLINICAL CASE #4: GERIATRIC 'TRIPLE WHAMMY' ACUTE KIDNEY INJURY
+======================================================================
+Prescribed Regimen: Lisinopril, Lasix, Advil
+Patient Profile:    Age 74y | eGFR: 45.0 mL/min | Hepatic: False | Pregnant: False
+----------------------------------------------------------------------
+1. NEURAL ENTITY RESOLUTION:
+   • Query 'Lisinopril' ➔ Lisinopril (Canonical ID: lisinopril)
+     Class: ACE Inhibitor | Method: exact_alias (Confidence: 100.0%)
+   • Query 'Lasix' ➔ Furosemide (Canonical ID: furosemide)
+     Class: Loop Diuretic | Method: exact_alias (Confidence: 100.0%)
+   • Query 'Advil' ➔ Ibuprofen (Canonical ID: ibuprofen)
+     Class: Nonsteroidal Anti-inflammatory Drug (NSAID) | Method: exact_alias (Confidence: 100.0%)
+
+2. SAFETY DETERMINATION: [CONTRAINDICATED] (Evaluated in 0.22 ms)
+
+3. PAIRWISE INTERACTIONS: None detected (Safe combination).
+
+4. CUMULATIVE MULTI-DRUG TOXICITY INDICES:
+   • Serotonin Syndrome Index:  0.00 [LOW]
+   • QT Prolongation Arrhythmia: 0.00 [LOW]
+   • Bleeding / Hemorrhage:      0.28 [ELEVATED]
+   • CNS / Respiratory Sedation: 0.00 [LOW]
+   🚨 TRIPLE WHAMMY ALERT: Acute Kidney Injury Risk across (Lisinopril, Furosemide, Ibuprofen)
+
+6. PATIENT-FRIENDLY ACTIONABLE GUIDANCE:
+   💧 Kidney Alert (Triple Whammy): Taking blood pressure pills, water pills, and pain relievers (NSAIDs) together can stress your kidneys. Stay hydrated and avoid over-the-counter ibuprofen or naproxen.
+   👴 Senior Care Notice: Certain medications in your list are associated with higher fall risks or confusion in adults over 65. Consult your pharmacist for dose titration.
+
+======================================================================
+ CLINICAL CASE #5: CARDIOMETABOLIC SAFE REGIMEN (COMPATIBLE THERAPY)
+======================================================================
+Prescribed Regimen: Lipitor, Glucophage, Prinivil
+Patient Profile:    Age 52y | eGFR: 90.0 mL/min | Hepatic: False | Pregnant: False
+----------------------------------------------------------------------
+1. NEURAL ENTITY RESOLUTION:
+   • Query 'Lipitor' ➔ Atorvastatin (Canonical ID: atorvastatin)
+     Class: HMG-CoA Reductase Inhibitor (Statin) | Method: exact_alias (Confidence: 100.0%)
+   • Query 'Glucophage' ➔ Metformin (Canonical ID: metformin)
+     Class: Biguanide Antihyperglycemic | Method: exact_alias (Confidence: 100.0%)
+   • Query 'Prinivil' ➔ Lisinopril (Canonical ID: lisinopril)
+     Class: ACE Inhibitor | Method: exact_alias (Confidence: 100.0%)
+
+2. SAFETY DETERMINATION: [SAFE] (Evaluated in 0.18 ms)
+
+3. PAIRWISE INTERACTIONS: None detected (Safe combination).
+
+4. CUMULATIVE MULTI-DRUG TOXICITY INDICES:
+   • Serotonin Syndrome Index:  0.00 [LOW]
+   • QT Prolongation Arrhythmia: 0.00 [LOW]
+   • Bleeding / Hemorrhage:      0.00 [LOW]
+   • CNS / Respiratory Sedation: 0.00 [LOW]
+
+6. PATIENT-FRIENDLY ACTIONABLE GUIDANCE:
+   ✅ No major polypharmacy danger signs detected. Take all medications exactly as directed by your prescribing physician.
+
+======================================================================
+ ALL CLINICAL DEMONSTRATION CASES EVALUATED SUCCESSFULLY
+======================================================================
