@@ -48,7 +48,7 @@ We engineered PharmaShield AI using a **Hybrid Neural-Symbolic Architecture** de
 ---
 
 ## 🧗 Challenges We Overcame
-- **Zero-Cloud CPU Latency Optimization:** Running clinical safety checks during patient consultations requires instantaneous feedback. We optimized our vector normalization and graph traversal to execute in **mean 0.057 ms (n=36, median 0.052 ms, range 0.036–0.131 ms, đo 2026-11-09 16:10 +07, xem BENCHMARK_RESULTS.json)** on standard CPU hardware without needing an expensive GPU.
+- **Zero-Cloud CPU Latency Optimization:** Running clinical safety checks during patient consultations requires instantaneous feedback. We optimized our vector normalization and graph traversal to execute in **mean 0.075 ms (n=36, median 0.072 ms, range 0.037–0.182 ms, đo 2026-11-09 16:08 +07, xem BENCHMARK_RESULTS.json)** on standard CPU hardware without needing an expensive GPU.
 - **Defeating Generative Hallucinations in High-Stakes Medicine:** LLMs frequently invent plausible-sounding drug interactions or overlook dangerous contraindications. We solved this by using AI where it excels (semantic entity understanding and embedding similarity) while anchoring clinical verdicts in a deterministically verified pharmacological knowledge graph.
 - **Modeling Multi-Drug Cumulative Toxicity:** Standard drug databases only check two drugs at a time $(A \times B)$. Modeling cumulative 3+ drug risks (like the Triple Whammy or additive hERG potassium channel blockade) required architecting multi-dimensional accumulation formulas aligned with clinical consensus guidelines.
 
