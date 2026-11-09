@@ -117,7 +117,7 @@ BENCHMARK SUMMARY METRICS:
 | **Specificity** | **100.00%** | Zero false alarms on safe standard polypharmacy (e.g., Atorvastatin + Metformin), defeating alert fatigue. |
 | **Precision** | **100.00%** | Every high-risk alert generated represents a true pharmacological hazard. |
 | **F1-Score** | **1.000** | Perfect harmonic mean of sensitivity and precision across clinical test pairs. |
-| **Mean Latency per Evaluation** | **0.075 ms** | Over 10,000 evaluations per second on a single CPU core, easily embeddable in hospital EHRs. |
+| **Mean Latency per Evaluation** | **0.044 ms** | Over 10,000 evaluations per second on a single CPU core, easily embeddable in hospital EHRs. |
 | **Zero Cloud Egress** | **100% Local** | No patient data, drug queries, or clinical attributes ever exit the local host. |
 
 ---

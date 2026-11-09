@@ -57,7 +57,7 @@ We engineered PharmaShield AI using a **Hybrid Neural-Symbolic Architecture** de
 ## 🏆 Accomplishments That We're Proud Of
 - **100.00% Clinical Sensitivity (Recall):** Successfully caught 100% of contraindicated and severe drug-drug interactions across our 36-pair empirical benchmark with **zero false negatives**.
 - **100.00% Specificity:** Correctly classified safe standard cardiometabolic and antimicrobial therapies, completely eliminating false alarms and alert fatigue.
-- **0.057 ms Mean Latency:** Capable of auditing over 10,000 multi-drug regimens per second on a single CPU core (n=36, median 0.052 ms, range 0.036–0.131 ms, đo 2026-11-09 16:10 +07, xem BENCHMARK_RESULTS.json).
+- **Mean Latency: 0.044 ms (n=36, median 0.044 ms, range 0.027–0.115 ms, đo 2026-11-09 16:30 +07, xem BENCHMARK_RESULTS.json)**: Capable of auditing over 10,000 multi-drug regimens per second on a single CPU core.
 - **12/12 Automated Tests Passing:** Validated end-to-end functionality across entity resolution, Beers criteria, Triple Whammy detection, and REST API contracts (pytest, 12.26s, log EVIDENCE/pytest-20261109.log).
 
 ---
