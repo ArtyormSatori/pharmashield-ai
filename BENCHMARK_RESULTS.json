@@ -1,5 +1,5 @@
 {
-  "benchmark_timestamp": "2026-11-09T14:45:16+0700",
+  "benchmark_timestamp": "2026-11-09T16:18:55+0700",
   "total_test_pairs": 36,
   "metrics": {
     "binary_accuracy_pct": 100.0,
@@ -8,7 +8,7 @@
     "precision_pct": 100.0,
     "f1_score_pct": 100.0,
     "exact_severity_accuracy_pct": 100.0,
-    "mean_latency_ms": 0.094,
+    "mean_latency_ms": 0.043,
     "true_positives": 26,
     "true_negatives": 10,
     "false_positives": 0,
@@ -23,7 +23,7 @@
       "predicted_severity": "CONTRAINDICATED",
       "is_exact_severity": true,
       "status": "PASS",
-      "latency_ms": 0.24
+      "latency_ms": 0.109
     },
     {
       "drug_a": "warfarin",
@@ -33,7 +33,7 @@
       "predicted_severity": "SEVERE",
       "is_exact_severity": true,
       "status": "PASS",
-      "latency_ms": 0.223
+      "latency_ms": 0.069
     },
     {
       "drug_a": "warfarin",
@@ -43,7 +43,7 @@
       "predicted_severity": "CONTRAINDICATED",
       "is_exact_severity": true,
       "status": "PASS",
-      "latency_ms": 0.114
+      "latency_ms": 0.055
     },
     {
       "drug_a": "warfarin",
@@ -53,7 +53,7 @@
       "predicted_severity": "CONTRAINDICATED",
       "is_exact_severity": true,
       "status": "PASS",
-      "latency_ms": 0.092
+      "latency_ms": 0.046
     },
     {
       "drug_a": "clopidogrel",
@@ -63,7 +63,7 @@
       "predicted_severity": "SEVERE",
       "is_exact_severity": true,
       "status": "PASS",
-      "latency_ms": 0.141
+      "latency_ms": 0.052
     },
     {
       "drug_a": "sertraline",
@@ -73,7 +73,7 @@
       "predicted_severity": "SEVERE",
       "is_exact_severity": true,
       "status": "PASS",
-      "latency_ms": 0.143
+      "latency_ms": 0.055
     },
     {
       "drug_a": "sertraline",
@@ -83,7 +83,7 @@
       "predicted_severity": "CONTRAINDICATED",
       "is_exact_severity": true,
       "status": "PASS",
-      "latency_ms": 0.082
+      "latency_ms": 0.047
     },
     {
       "drug_a": "fluoxetine",
@@ -93,7 +93,7 @@
       "predicted_severity": "CONTRAINDICATED",
       "is_exact_severity": true,
       "status": "PASS",
-      "latency_ms": 0.088
+      "latency_ms": 0.044
     },
     {
       "drug_a": "amiodarone",
@@ -103,7 +103,7 @@
       "predicted_severity": "CONTRAINDICATED",
       "is_exact_severity": true,
       "status": "PASS",
-      "latency_ms": 0.101
+      "latency_ms": 0.045
     },
     {
       "drug_a": "citalopram",
@@ -113,7 +113,7 @@
       "predicted_severity": "CONTRAINDICATED",
       "is_exact_severity": true,
       "status": "PASS",
-      "latency_ms": 0.133
+      "latency_ms": 0.052
     },
     {
       "drug_a": "atorvastatin",
@@ -123,7 +123,7 @@
       "predicted_severity": "CONTRAINDICATED",
       "is_exact_severity": true,
       "status": "PASS",
-      "latency_ms": 0.084
+      "latency_ms": 0.057
     },
     {
       "drug_a": "simvastatin",
@@ -133,7 +133,7 @@
       "predicted_severity": "CONTRAINDICATED",
       "is_exact_severity": true,
       "status": "PASS",
-      "latency_ms": 0.08
+      "latency_ms": 0.047
     },
     {
       "drug_a": "lisinopril",
@@ -143,7 +143,7 @@
       "predicted_severity": "SEVERE",
       "is_exact_severity": true,
       "status": "PASS",
-      "latency_ms": 0.068
+      "latency_ms": 0.039
     },
     {
       "drug_a": "oxycodone",
@@ -153,7 +153,7 @@
       "predicted_severity": "CONTRAINDICATED",
       "is_exact_severity": true,
       "status": "PASS",
-      "latency_ms": 0.099
+      "latency_ms": 0.045
     },
     {
       "drug_a": "diazepam",
@@ -163,7 +163,7 @@
       "predicted_severity": "SEVERE",
       "is_exact_severity": true,
       "status": "PASS",
-      "latency_ms": 0.111
+      "latency_ms": 0.046
     },
     {
       "drug_a": "amiodarone",
@@ -173,7 +173,7 @@
       "predicted_severity": "SEVERE",
       "is_exact_severity": true,
       "status": "PASS",
-      "latency_ms": 0.109
+      "latency_ms": 0.04
     },
     {
       "drug_a": "rifampin",
@@ -183,7 +183,7 @@
       "predicted_severity": "SEVERE",
       "is_exact_severity": true,
       "status": "PASS",
-      "latency_ms": 0.093
+      "latency_ms": 0.038
     },
     {
       "drug_a": "ciprofloxacin",
@@ -193,7 +193,7 @@
       "predicted_severity": "SEVERE",
       "is_exact_severity": true,
       "status": "PASS",
-      "latency_ms": 0.111
+      "latency_ms": 0.038
     },
     {
       "drug_a": "metformin",
@@ -203,7 +203,7 @@
       "predicted_severity": "MODERATE",
       "is_exact_severity": true,
       "status": "PASS",
-      "latency_ms": 0.082
+      "latency_ms": 0.038
     },
     {
       "drug_a": "diltiazem",
@@ -213,7 +213,7 @@
       "predicted_severity": "MODERATE",
       "is_exact_severity": true,
       "status": "PASS",
-      "latency_ms": 0.12
+      "latency_ms": 0.043
     },
     {
       "drug_a": "verapamil",
@@ -223,7 +223,7 @@
       "predicted_severity": "MODERATE",
       "is_exact_severity": true,
       "status": "PASS",
-      "latency_ms": 0.075
+      "latency_ms": 0.04
     },
     {
       "drug_a": "sertraline",
@@ -233,7 +233,7 @@
       "predicted_severity": "MODERATE",
       "is_exact_severity": true,
       "status": "PASS",
-      "latency_ms": 0.096
+      "latency_ms": 0.057
     },
     {
       "drug_a": "fluoxetine",
@@ -243,7 +243,7 @@
       "predicted_severity": "MODERATE",
       "is_exact_severity": true,
       "status": "PASS",
-      "latency_ms": 0.066
+      "latency_ms": 0.049
     },
     {
       "drug_a": "omeprazole",
@@ -253,7 +253,7 @@
       "predicted_severity": "MODERATE",
       "is_exact_severity": true,
       "status": "PASS",
-      "latency_ms": 0.061
+      "latency_ms": 0.041
     },
     {
       "drug_a": "ciprofloxacin",
@@ -263,7 +263,7 @@
       "predicted_severity": "MODERATE",
       "is_exact_severity": true,
       "status": "PASS",
-      "latency_ms": 0.072
+      "latency_ms": 0.041
     },
     {
       "drug_a": "amlodipine",
@@ -273,7 +273,7 @@
       "predicted_severity": "MODERATE",
       "is_exact_severity": true,
       "status": "PASS",
-      "latency_ms": 0.122
+      "latency_ms": 0.036
     },
     {
       "drug_a": "atorvastatin",
@@ -283,7 +283,7 @@
       "predicted_severity": "SAFE",
       "is_exact_severity": true,
       "status": "PASS",
-      "latency_ms": 0.055
+      "latency_ms": 0.031
     },
     {
       "drug_a": "lisinopril",
@@ -293,7 +293,7 @@
       "predicted_severity": "SAFE",
       "is_exact_severity": true,
       "status": "PASS",
-      "latency_ms": 0.048
+      "latency_ms": 0.029
     },
     {
       "drug_a": "amlodipine",
@@ -303,7 +303,7 @@
       "predicted_severity": "SAFE",
       "is_exact_severity": true,
       "status": "PASS",
-      "latency_ms": 0.059
+      "latency_ms": 0.028
     },
     {
       "drug_a": "acetaminophen",
@@ -313,7 +313,7 @@
       "predicted_severity": "SAFE",
       "is_exact_severity": true,
       "status": "PASS",
-      "latency_ms": 0.071
+      "latency_ms": 0.028
     },
     {
       "drug_a": "pantoprazole",
@@ -323,7 +323,7 @@
       "predicted_severity": "SAFE",
       "is_exact_severity": true,
       "status": "PASS",
-      "latency_ms": 0.055
+      "latency_ms": 0.031
     },
     {
       "drug_a": "rosuvastatin",
@@ -333,7 +333,7 @@
       "predicted_severity": "SAFE",
       "is_exact_severity": true,
       "status": "PASS",
-      "latency_ms": 0.049
+      "latency_ms": 0.029
     },
     {
       "drug_a": "acetaminophen",
@@ -343,7 +343,7 @@
       "predicted_severity": "SAFE",
       "is_exact_severity": true,
       "status": "PASS",
-      "latency_ms": 0.057
+      "latency_ms": 0.027
     },
     {
       "drug_a": "losartan",
@@ -353,7 +353,7 @@
       "predicted_severity": "SAFE",
       "is_exact_severity": true,
       "status": "PASS",
-      "latency_ms": 0.098
+      "latency_ms": 0.028
     },
     {
       "drug_a": "acetaminophen",
@@ -363,7 +363,7 @@
       "predicted_severity": "SAFE",
       "is_exact_severity": true,
       "status": "PASS",
-      "latency_ms": 0.054
+      "latency_ms": 0.027
     },
     {
       "drug_a": "metformin",
@@ -373,7 +373,7 @@
       "predicted_severity": "SAFE",
       "is_exact_severity": true,
       "status": "PASS",
-      "latency_ms": 0.046
+      "latency_ms": 0.027
     }
   ]
 }

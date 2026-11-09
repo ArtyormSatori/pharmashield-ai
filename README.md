@@ -7,7 +7,7 @@
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.110%2B-009688?style=for-the-badge&logo=fastapi)](https://fastapi.tiangolo.com)
 [![Privacy](https://img.shields.io/badge/Privacy-100%25_On--Device-10b981?style=for-the-badge)](https://github.com/ArtyormSatori/pharmashield-ai)
 [![Clinical Sensitivity](https://img.shields.io/badge/Sensitivity-100%25_Recall-ef4444?style=for-the-badge)](https://github.com/ArtyormSatori/pharmashield-ai)
-[![Latency](https://img.shields.io/badge/Mean_Latency-0.094_ms-3b82f6?style=for-the-badge)](https://github.com/ArtyormSatori/pharmashield-ai)
+[![Latency](https://img.shields.io/badge/Mean_Latency-0.057_ms-3b82f6?style=for-the-badge)](https://github.com/ArtyormSatori/pharmashield-ai)
 
 ---
 
@@ -107,7 +107,7 @@ BENCHMARK SUMMARY METRICS:
   F1-Score:                    100.00%
   Binary Detection Accuracy:   100.00%
   Exact Severity Grade Acc:    100.00%
-  Mean Evaluation Latency:     0.094 ms (94 microseconds!)
+  Mean Evaluation Latency:     0.057 ms (n=36, median 0.052 ms, range 0.036–0.131 ms, đo 2026-11-09 16:10 +07, xem BENCHMARK_RESULTS.json)
 =======================================================
 ```
 
@@ -117,7 +117,7 @@ BENCHMARK SUMMARY METRICS:
 | **Specificity** | **100.00%** | Zero false alarms on safe standard polypharmacy (e.g., Atorvastatin + Metformin), defeating alert fatigue. |
 | **Precision** | **100.00%** | Every high-risk alert generated represents a true pharmacological hazard. |
 | **F1-Score** | **1.000** | Perfect harmonic mean of sensitivity and precision across clinical test pairs. |
-| **Mean Latency per Evaluation** | **0.094 ms** | Over 10,000 evaluations per second on a single CPU core, easily embeddable in hospital EHRs. |
+| **Mean Latency per Evaluation** | **0.057 ms** | Over 10,000 evaluations per second on a single CPU core, easily embeddable in hospital EHRs. |
 | **Zero Cloud Egress** | **100% Local** | No patient data, drug queries, or clinical attributes ever exit the local host. |
 
 ---

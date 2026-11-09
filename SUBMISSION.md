@@ -48,7 +48,7 @@ We engineered PharmaShield AI using a **Hybrid Neural-Symbolic Architecture** de
 ---
 
 ## 🧗 Challenges We Overcame
-- **Zero-Cloud CPU Latency Optimization:** Running clinical safety checks during patient consultations requires instantaneous feedback. We optimized our vector normalization and graph traversal to execute in **0.094 milliseconds** on standard CPU hardware without needing an expensive GPU.
+- **Zero-Cloud CPU Latency Optimization:** Running clinical safety checks during patient consultations requires instantaneous feedback. We optimized our vector normalization and graph traversal to execute in **mean 0.057 ms (n=36, median 0.052 ms, range 0.036–0.131 ms, đo 2026-11-09 16:10 +07, xem BENCHMARK_RESULTS.json)** on standard CPU hardware without needing an expensive GPU.
 - **Defeating Generative Hallucinations in High-Stakes Medicine:** LLMs frequently invent plausible-sounding drug interactions or overlook dangerous contraindications. We solved this by using AI where it excels (semantic entity understanding and embedding similarity) while anchoring clinical verdicts in a deterministically verified pharmacological knowledge graph.
 - **Modeling Multi-Drug Cumulative Toxicity:** Standard drug databases only check two drugs at a time $(A \times B)$. Modeling cumulative 3+ drug risks (like the Triple Whammy or additive hERG potassium channel blockade) required architecting multi-dimensional accumulation formulas aligned with clinical consensus guidelines.
 
@@ -57,9 +57,8 @@ We engineered PharmaShield AI using a **Hybrid Neural-Symbolic Architecture** de
 ## 🏆 Accomplishments That We're Proud Of
 - **100.00% Clinical Sensitivity (Recall):** Successfully caught 100% of contraindicated and severe drug-drug interactions across our 36-pair empirical benchmark with **zero false negatives**.
 - **100.00% Specificity:** Correctly classified safe standard cardiometabolic and antimicrobial therapies, completely eliminating false alarms and alert fatigue.
-- **0.094 ms Mean Latency:** Capable of auditing over 10,000 multi-drug regimens per second on a single CPU core.
-- **100% On-Device Privacy:** Achieved zero outbound cloud egress, making PharmaShield AI inherently HIPAA and GDPR compliant for healthcare deployments.
-- **12/12 Automated Tests Passing:** Validated end-to-end functionality across entity resolution, Beers criteria, Triple Whammy detection, and REST API contracts.
+- **0.057 ms Mean Latency:** Capable of auditing over 10,000 multi-drug regimens per second on a single CPU core (n=36, median 0.052 ms, range 0.036–0.131 ms, đo 2026-11-09 16:10 +07, xem BENCHMARK_RESULTS.json).
+- **12/12 Automated Tests Passing:** Validated end-to-end functionality across entity resolution, Beers criteria, Triple Whammy detection, and REST API contracts (pytest, 12.26s, log EVIDENCE/pytest-20261109.log).
 
 ---
 
