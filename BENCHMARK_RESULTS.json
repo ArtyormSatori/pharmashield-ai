@@ -1,0 +1,379 @@
+{
+  "benchmark_timestamp": "2026-11-09T14:45:16+0700",
+  "total_test_pairs": 36,
+  "metrics": {
+    "binary_accuracy_pct": 100.0,
+    "sensitivity_recall_pct": 100.0,
+    "specificity_pct": 100.0,
+    "precision_pct": 100.0,
+    "f1_score_pct": 100.0,
+    "exact_severity_accuracy_pct": 100.0,
+    "mean_latency_ms": 0.094,
+    "true_positives": 26,
+    "true_negatives": 10,
+    "false_positives": 0,
+    "false_negatives": 0
+  },
+  "results": [
+    {
+      "drug_a": "warfarin",
+      "drug_b": "amiodarone",
+      "category": "critical_bleeding_cyp",
+      "expected_severity": "CONTRAINDICATED",
+      "predicted_severity": "CONTRAINDICATED",
+      "is_exact_severity": true,
+      "status": "PASS",
+      "latency_ms": 0.24
+    },
+    {
+      "drug_a": "warfarin",
+      "drug_b": "aspirin",
+      "category": "critical_bleeding",
+      "expected_severity": "SEVERE",
+      "predicted_severity": "SEVERE",
+      "is_exact_severity": true,
+      "status": "PASS",
+      "latency_ms": 0.223
+    },
+    {
+      "drug_a": "warfarin",
+      "drug_b": "ibuprofen",
+      "category": "critical_bleeding",
+      "expected_severity": "CONTRAINDICATED",
+      "predicted_severity": "CONTRAINDICATED",
+      "is_exact_severity": true,
+      "status": "PASS",
+      "latency_ms": 0.114
+    },
+    {
+      "drug_a": "warfarin",
+      "drug_b": "fluconazole",
+      "category": "critical_bleeding_cyp",
+      "expected_severity": "CONTRAINDICATED",
+      "predicted_severity": "CONTRAINDICATED",
+      "is_exact_severity": true,
+      "status": "PASS",
+      "latency_ms": 0.092
+    },
+    {
+      "drug_a": "clopidogrel",
+      "drug_b": "omeprazole",
+      "category": "cyp2c19_bioactivation",
+      "expected_severity": "SEVERE",
+      "predicted_severity": "SEVERE",
+      "is_exact_severity": true,
+      "status": "PASS",
+      "latency_ms": 0.141
+    },
+    {
+      "drug_a": "sertraline",
+      "drug_b": "tramadol",
+      "category": "serotonin_syndrome",
+      "expected_severity": "SEVERE",
+      "predicted_severity": "SEVERE",
+      "is_exact_severity": true,
+      "status": "PASS",
+      "latency_ms": 0.143
+    },
+    {
+      "drug_a": "sertraline",
+      "drug_b": "linezolid",
+      "category": "serotonin_storm_maoi",
+      "expected_severity": "CONTRAINDICATED",
+      "predicted_severity": "CONTRAINDICATED",
+      "is_exact_severity": true,
+      "status": "PASS",
+      "latency_ms": 0.082
+    },
+    {
+      "drug_a": "fluoxetine",
+      "drug_b": "phenelzine",
+      "category": "serotonin_storm_maoi",
+      "expected_severity": "CONTRAINDICATED",
+      "predicted_severity": "CONTRAINDICATED",
+      "is_exact_severity": true,
+      "status": "PASS",
+      "latency_ms": 0.088
+    },
+    {
+      "drug_a": "amiodarone",
+      "drug_b": "azithromycin",
+      "category": "qt_prolongation_torsades",
+      "expected_severity": "CONTRAINDICATED",
+      "predicted_severity": "CONTRAINDICATED",
+      "is_exact_severity": true,
+      "status": "PASS",
+      "latency_ms": 0.101
+    },
+    {
+      "drug_a": "citalopram",
+      "drug_b": "haloperidol",
+      "category": "qt_prolongation_torsades",
+      "expected_severity": "CONTRAINDICATED",
+      "predicted_severity": "CONTRAINDICATED",
+      "is_exact_severity": true,
+      "status": "PASS",
+      "latency_ms": 0.133
+    },
+    {
+      "drug_a": "atorvastatin",
+      "drug_b": "clarithromycin",
+      "category": "rhabdomyolysis_cyp3a4",
+      "expected_severity": "CONTRAINDICATED",
+      "predicted_severity": "CONTRAINDICATED",
+      "is_exact_severity": true,
+      "status": "PASS",
+      "latency_ms": 0.084
+    },
+    {
+      "drug_a": "simvastatin",
+      "drug_b": "amiodarone",
+      "category": "rhabdomyolysis_cyp3a4",
+      "expected_severity": "CONTRAINDICATED",
+      "predicted_severity": "CONTRAINDICATED",
+      "is_exact_severity": true,
+      "status": "PASS",
+      "latency_ms": 0.08
+    },
+    {
+      "drug_a": "lisinopril",
+      "drug_b": "spironolactone",
+      "category": "hyperkalemia",
+      "expected_severity": "SEVERE",
+      "predicted_severity": "SEVERE",
+      "is_exact_severity": true,
+      "status": "PASS",
+      "latency_ms": 0.068
+    },
+    {
+      "drug_a": "oxycodone",
+      "drug_b": "alprazolam",
+      "category": "respiratory_depression",
+      "expected_severity": "CONTRAINDICATED",
+      "predicted_severity": "CONTRAINDICATED",
+      "is_exact_severity": true,
+      "status": "PASS",
+      "latency_ms": 0.099
+    },
+    {
+      "drug_a": "diazepam",
+      "drug_b": "tramadol",
+      "category": "cns_seizure",
+      "expected_severity": "SEVERE",
+      "predicted_severity": "SEVERE",
+      "is_exact_severity": true,
+      "status": "PASS",
+      "latency_ms": 0.111
+    },
+    {
+      "drug_a": "amiodarone",
+      "drug_b": "digoxin",
+      "category": "pgp_digoxin_toxicity",
+      "expected_severity": "SEVERE",
+      "predicted_severity": "SEVERE",
+      "is_exact_severity": true,
+      "status": "PASS",
+      "latency_ms": 0.109
+    },
+    {
+      "drug_a": "rifampin",
+      "drug_b": "warfarin",
+      "category": "cyp_induction_clotting",
+      "expected_severity": "SEVERE",
+      "predicted_severity": "SEVERE",
+      "is_exact_severity": true,
+      "status": "PASS",
+      "latency_ms": 0.093
+    },
+    {
+      "drug_a": "ciprofloxacin",
+      "drug_b": "theophylline",
+      "category": "cyp1a2_theophylline_toxicity",
+      "expected_severity": "SEVERE",
+      "predicted_severity": "SEVERE",
+      "is_exact_severity": true,
+      "status": "PASS",
+      "latency_ms": 0.111
+    },
+    {
+      "drug_a": "metformin",
+      "drug_b": "ciprofloxacin",
+      "category": "dysglycemia",
+      "expected_severity": "MODERATE",
+      "predicted_severity": "MODERATE",
+      "is_exact_severity": true,
+      "status": "PASS",
+      "latency_ms": 0.082
+    },
+    {
+      "drug_a": "diltiazem",
+      "drug_b": "atorvastatin",
+      "category": "cyp3a4_inhibition",
+      "expected_severity": "MODERATE",
+      "predicted_severity": "MODERATE",
+      "is_exact_severity": true,
+      "status": "PASS",
+      "latency_ms": 0.12
+    },
+    {
+      "drug_a": "verapamil",
+      "drug_b": "simvastatin",
+      "category": "cyp3a4_inhibition",
+      "expected_severity": "MODERATE",
+      "predicted_severity": "MODERATE",
+      "is_exact_severity": true,
+      "status": "PASS",
+      "latency_ms": 0.075
+    },
+    {
+      "drug_a": "sertraline",
+      "drug_b": "metoprolol",
+      "category": "cyp2d6_inhibition",
+      "expected_severity": "MODERATE",
+      "predicted_severity": "MODERATE",
+      "is_exact_severity": true,
+      "status": "PASS",
+      "latency_ms": 0.096
+    },
+    {
+      "drug_a": "fluoxetine",
+      "drug_b": "metoprolol",
+      "category": "cyp2d6_inhibition",
+      "expected_severity": "MODERATE",
+      "predicted_severity": "MODERATE",
+      "is_exact_severity": true,
+      "status": "PASS",
+      "latency_ms": 0.066
+    },
+    {
+      "drug_a": "omeprazole",
+      "drug_b": "diazepam",
+      "category": "cyp2c19_inhibition",
+      "expected_severity": "MODERATE",
+      "predicted_severity": "MODERATE",
+      "is_exact_severity": true,
+      "status": "PASS",
+      "latency_ms": 0.061
+    },
+    {
+      "drug_a": "ciprofloxacin",
+      "drug_b": "zolpidem",
+      "category": "cyp1a2_inhibition",
+      "expected_severity": "MODERATE",
+      "predicted_severity": "MODERATE",
+      "is_exact_severity": true,
+      "status": "PASS",
+      "latency_ms": 0.072
+    },
+    {
+      "drug_a": "amlodipine",
+      "drug_b": "simvastatin",
+      "category": "cyp3a4_competition",
+      "expected_severity": "MODERATE",
+      "predicted_severity": "MODERATE",
+      "is_exact_severity": true,
+      "status": "PASS",
+      "latency_ms": 0.122
+    },
+    {
+      "drug_a": "atorvastatin",
+      "drug_b": "metformin",
+      "category": "compatible_standard",
+      "expected_severity": "SAFE",
+      "predicted_severity": "SAFE",
+      "is_exact_severity": true,
+      "status": "PASS",
+      "latency_ms": 0.055
+    },
+    {
+      "drug_a": "lisinopril",
+      "drug_b": "metformin",
+      "category": "compatible_standard",
+      "expected_severity": "SAFE",
+      "predicted_severity": "SAFE",
+      "is_exact_severity": true,
+      "status": "PASS",
+      "latency_ms": 0.048
+    },
+    {
+      "drug_a": "amlodipine",
+      "drug_b": "metformin",
+      "category": "compatible_standard",
+      "expected_severity": "SAFE",
+      "predicted_severity": "SAFE",
+      "is_exact_severity": true,
+      "status": "PASS",
+      "latency_ms": 0.059
+    },
+    {
+      "drug_a": "acetaminophen",
+      "drug_b": "amoxicillin",
+      "category": "compatible_standard",
+      "expected_severity": "SAFE",
+      "predicted_severity": "SAFE",
+      "is_exact_severity": true,
+      "status": "PASS",
+      "latency_ms": 0.071
+    },
+    {
+      "drug_a": "pantoprazole",
+      "drug_b": "clopidogrel",
+      "category": "safe_alternative_ppi",
+      "expected_severity": "SAFE",
+      "predicted_severity": "SAFE",
+      "is_exact_severity": true,
+      "status": "PASS",
+      "latency_ms": 0.055
+    },
+    {
+      "drug_a": "rosuvastatin",
+      "drug_b": "clarithromycin",
+      "category": "safe_alternative_statin",
+      "expected_severity": "SAFE",
+      "predicted_severity": "SAFE",
+      "is_exact_severity": true,
+      "status": "PASS",
+      "latency_ms": 0.049
+    },
+    {
+      "drug_a": "acetaminophen",
+      "drug_b": "lisinopril",
+      "category": "compatible_standard",
+      "expected_severity": "SAFE",
+      "predicted_severity": "SAFE",
+      "is_exact_severity": true,
+      "status": "PASS",
+      "latency_ms": 0.057
+    },
+    {
+      "drug_a": "losartan",
+      "drug_b": "amlodipine",
+      "category": "compatible_standard",
+      "expected_severity": "SAFE",
+      "predicted_severity": "SAFE",
+      "is_exact_severity": true,
+      "status": "PASS",
+      "latency_ms": 0.098
+    },
+    {
+      "drug_a": "acetaminophen",
+      "drug_b": "atorvastatin",
+      "category": "compatible_standard",
+      "expected_severity": "SAFE",
+      "predicted_severity": "SAFE",
+      "is_exact_severity": true,
+      "status": "PASS",
+      "latency_ms": 0.054
+    },
+    {
+      "drug_a": "metformin",
+      "drug_b": "pantoprazole",
+      "category": "compatible_standard",
+      "expected_severity": "SAFE",
+      "predicted_severity": "SAFE",
+      "is_exact_severity": true,
+      "status": "PASS",
+      "latency_ms": 0.046
+    }
+  ]
+}
